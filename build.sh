@@ -5,7 +5,7 @@
 if [[ ! $(docker images --quiet fontcc) ]]; then
 	git clone --depth=1 https://github.com/be5invis/Iosevka.git fontcc
 
-	(cd fontcc && docker build --tag fontcc:latest .)
+	(cd fontcc/docker && docker build --tag fontcc:latest .)
 
 	rm --force --recursive fontcc
 fi
